@@ -1,0 +1,17 @@
+{
+  "name": "chaiaurbackend",
+  "version": "1.0.0",
+  "description": "this is a backend course",
+  "keywords": [
+    "javaScript",
+    "typeScript",
+    "chai"
+  ],
+  "license": "ISC",
+  "author": "prajith nambiar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
