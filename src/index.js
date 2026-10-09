@@ -4,11 +4,22 @@ import express from "express";
 import {DB_NAME} from "./constants.js";
 import conectdb from "./db/index.js";
 
+const app = express();
+
 dotenv.config({
     path: './.env'
 });
 
-conectdb();
+conectdb().then(()=> {
+    app.on('error', (err)=>{
+console.log('dm not connected');
+throw err;
+
+    })
+    app.listen(process.env.PORT, ()=> {console.log(`server is running on port ${process.env.PORT}`)});
+}).catch((err)=> {
+    console.log('we got an error', err);
+})
 
 
 
